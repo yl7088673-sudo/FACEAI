@@ -1,15 +1,16 @@
-async function init() {
+document.getElementById('start-button').addEventListener('click', async () => {
   const modelURL = 'model/model.json';
   const metadataURL = 'model/metadata.json';
 
   const model = await tmImage.load(modelURL, metadataURL);
 
   const webcam = new tmImage.Webcam(300, 300, true);
-  await webcam.setup(); // 카메라 권한 요청
+  await webcam.setup(); // 여기서 카메라 권한 요청
   await webcam.play();
   document.getElementById('webcam-container').appendChild(webcam.canvas);
 
   window.requestAnimationFrame(loop);
+
   async function loop() {
     webcam.update();
     const prediction = await model.predict(webcam.canvas);
@@ -18,6 +19,4 @@ async function init() {
       .join('<br>');
     window.requestAnimationFrame(loop);
   }
-}
-
-init();
+});
