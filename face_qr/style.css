@@ -1,0 +1,22 @@
+/* 전체 폰트와 중앙 정렬 */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+/* 웹캠 화면 */
+#webcam-container {
+  margin: 20px auto;
+}
+
+/* 예측 결과 */
+#prediction-container {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* 제목 스타일 */
+h1 {
+  color: #333;
+}
