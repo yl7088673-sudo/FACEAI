@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 얼굴 인식</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+</head>
+<body>
+  <h1>AI 얼굴 인식으로 국적 알아보기</h1>
+
+  <!-- 버튼 클릭 시 웹캠 시작 -->
+  <button id="start-button">웹캠 시작</button>
+
+  <!-- 웹캠 화면 -->
+  <div id="webcam-container"></div>
+
+  <!-- 예측 결과 -->
+  <div id="prediction-container"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
